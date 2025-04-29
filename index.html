@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>先生から円周率を求めよう</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<div id="templates"></div>
+	<div id="templates">
+		<template id="mainUi">
+			<div id="dataInput"><seats-data-input></seats-data-input> </div>
+			<div id="result"></div>
+		</template>
+		<template id="seatInputElement">
+			<span class="count"></span>
+			<div class="floatingButtons">
+				<button type="button" class="decrement">-</button>
+				<button type="button" class="increment">+</button>
+			</div>
+		</template>
+		<template id="seatsDataInputElement"></template>
+	</div>
 	<div id="main">
 		<header>先生から円周率を求めよう</header>
-		<main></main>
+		<main>
+		</main>
 	</div>
+	<script type="module" src="./index.js"></script>
 </body>
+
 </html>

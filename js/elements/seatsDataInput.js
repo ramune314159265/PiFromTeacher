@@ -9,11 +9,13 @@ export class SeatsDataInputElement extends HTMLElement {
 	set() {
 		this.innerHTML = ''
 
+		const maxSeatValue = Math.max(...this.data.flat())
 		this.data.forEach((y, yi) => {
 			y.forEach((x, xi) => {
 				const element = document.createElement('seat-input')
 				this.append(element)
 				element.setCount(x)
+				element.setRatioFromMax(x / maxSeatValue)
 				element.addEventListener('countChanged', e => {
 					this.setSeatCount(xi, yi, e.detail.count)
 				})
@@ -34,5 +36,6 @@ export class SeatsDataInputElement extends HTMLElement {
 	}
 	setSeatCount(x, y, value) {
 		this.data[y][x] = value
+		this.set()
 	}
 }

@@ -38,4 +38,7 @@ export class SeatInputElement extends HTMLElement {
 		this.countElement.textContent = number
 		this.count = number
 	}
+	setRatioFromMax(value) {
+		this.style.backgroundColor = `rgb(255 0 0 / ${value})`
+	}
 }

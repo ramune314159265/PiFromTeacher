@@ -1,3 +1,5 @@
+import { fullCircleCenter } from './fullCircleCenter'
+import { fullCircleEdge } from './fullCircleEdge'
 import { quarterCircleLeftBottom } from './quarterCircleLeftBottom'
 import { quarterCircleLeftTop } from './quarterCircleLeftTop'
 import { quarterCircleRightBottom } from './quarterCircleRightBottom'
@@ -7,5 +9,7 @@ export const shapes = [
 	quarterCircleLeftBottom,
 	quarterCircleLeftTop,
 	quarterCircleRightBottom,
-	quarterCircleRightTop
+	quarterCircleRightTop,
+	fullCircleCenter,
+	fullCircleEdge
 ]

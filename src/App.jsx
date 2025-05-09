@@ -8,7 +8,7 @@ function App() {
 		<>
 			<Grid templateRows="3rem calc(100% - 3rem)" w="100%" h="100%">
 				<Header></Header>
-				<Grid templateRows="80% 500px" w="full" h="full" overflowY="scroll">
+				<Grid templateRows="500px 500px" w="full" h="full" overflowY="scroll">
 					<SeatsPanel></SeatsPanel>
 					<ResultPanel></ResultPanel>
 				</Grid>

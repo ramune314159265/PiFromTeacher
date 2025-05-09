@@ -38,10 +38,13 @@ export const ShapeResult = ({ shape }) => {
 			})
 		})
 
+		ctx.fillStyle = 'rgb(255 0 0 / 25%)'
+		shape.drawShape(ctx, size)
+
 		dotPosesWithTestPassed.forEach(([x, y, testPassed]) => {
-			ctx.fillStyle = testPassed ? 'green' : 'red'
+			ctx.fillStyle = testPassed ? 'red' : 'blue'
 			ctx.beginPath()
-			ctx.arc(x * size, y * size, 4, 0, 2 * Math.PI)
+			ctx.arc(x * size, y * size, 5, 0, 2 * Math.PI)
 			ctx.closePath()
 			ctx.fill()
 		})

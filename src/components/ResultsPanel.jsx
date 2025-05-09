@@ -7,7 +7,7 @@ export const ResultPanel = () => {
 		<Grid gridTemplateColumns={`repeat(${shapes.length}, 300px)`} gap={4} p={4} w="full" h="full" overflowX="scroll" overflowY="hidden">
 			<For each={shapes}>
 				{(shape, index) => (
-					<ShapeResult shape={shape}></ShapeResult>
+					<ShapeResult shape={shape} key={index}></ShapeResult>
 				)}
 			</For>
 		</Grid>

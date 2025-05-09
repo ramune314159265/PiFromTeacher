@@ -1,3 +1,5 @@
-export const quarterCircleRightBottomTester = (x, y) => {
-	return (x - 1) ** 2 + (y - 1) ** 2 <= 1
+export const quarterCircleRightBottom = {
+	tester(x, y) {
+		return (x - 1) ** 2 + (y - 1) ** 2 <= 1
+	}
 }

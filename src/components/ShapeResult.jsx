@@ -5,7 +5,7 @@ export const ShapeResult = ({ shape }) => {
 	const [dotPoses, { setDotPoses }] = useDotPoses()
 
 	return (
-		<Box w="300px" h="500px">
+		<Box w="300px" h="full">
 			<Heading size="xl">{shape.name}</Heading>
 		</Box>
 	)

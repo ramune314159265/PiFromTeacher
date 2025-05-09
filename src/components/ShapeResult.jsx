@@ -29,6 +29,9 @@ export const ShapeResult = ({ shape }) => {
 		ctx.fillStyle = 'white'
 		ctx.fillRect(0, 0, size, size)
 
+		ctx.fillStyle = 'rgb(255 0 0 / 25%)'
+		shape.drawShape(ctx, size)
+
 		ctx.strokeStyle = 'black'
 		seatsData.forEach((line, y) => {
 			const width = line.length
@@ -37,9 +40,6 @@ export const ShapeResult = ({ shape }) => {
 				ctx.strokeRect(size / width * x, size / height * y, size / width, size / height)
 			})
 		})
-
-		ctx.fillStyle = 'rgb(255 0 0 / 25%)'
-		shape.drawShape(ctx, size)
 
 		dotPosesWithTestPassed.forEach(([x, y, testPassed]) => {
 			ctx.fillStyle = testPassed ? 'red' : 'blue'

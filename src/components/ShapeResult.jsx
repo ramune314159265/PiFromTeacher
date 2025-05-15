@@ -48,7 +48,7 @@ export const ShapeResult = ({ shape }) => {
 			ctx.closePath()
 			ctx.fill()
 		})
-	}, [dotPosesWithTestPassed, seatsData])
+	}, [dotPosesWithTestPassed, seatsData, shape])
 
 	return (
 		<Flex direction="column" w="300px" h="full" gap={4}>
